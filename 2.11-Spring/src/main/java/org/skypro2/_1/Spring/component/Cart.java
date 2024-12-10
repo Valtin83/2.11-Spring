@@ -5,6 +5,7 @@ import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 @Component
@@ -23,5 +24,11 @@ public class Cart {
 
     public List<Integer> getItems() {
         return Collections.unmodifiableList(items);
+    }
+
+
+    public List<Integer> removeItem(List<Integer> idList) {
+        items.removeIf(idList::contains);
+        return items;
     }
 }

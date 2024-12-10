@@ -7,4 +7,6 @@ public interface CartService {
     List<Integer> addItems(List<Integer> ids);
 
     List<Integer> getItems();
+
+    List<Integer> removeItems(List<Integer> ids);
 }

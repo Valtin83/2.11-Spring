@@ -23,4 +23,9 @@ public class CartController {
     public List<Integer> getItems() {
         return cartService.getItems();
     }
+
+    @GetMapping("/remove")
+    public List<Integer> removeItems(@RequestParam List<Integer>ids) {
+        return cartService.removeItems(ids);
+    }
 }

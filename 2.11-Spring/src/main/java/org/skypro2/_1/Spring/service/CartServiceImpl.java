@@ -21,4 +21,9 @@ public class CartServiceImpl implements CartService {
     public List<Integer> getItems() {
         return cart.getItems();
     }
+
+    @Override
+    public List<Integer> removeItems(List<Integer> ids) {
+        return cart.removeItem(ids);
+    }
 }
